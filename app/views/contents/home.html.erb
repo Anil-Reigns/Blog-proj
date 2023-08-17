@@ -11,17 +11,17 @@
 
 <form action="/home" method="get">
     <select name="filter" id="">
-        <option value="title">title</option>
-        <option value="author">author</option>
+        <option value="automation">automation</option>
+        <option value="medical">medical</option>
+        <option value="author">construction</option>
     </select>
     <input type="text" value="<%= @l_id %>" style="display: none;" name="param1">
 
     <button type="submit">submit</button>
 </form>
 
-
 <div id="outer">
-<% @allblogs.each_with_index do |x, y|%>
+<% @all.each_with_index do |x, y|%>
     <div id="container">
         <h1 id="title_num"><%= "Blog #{y+1}" %></h1>
         <div id="link">

@@ -1,15 +1,12 @@
 class ContentsController < ApplicationController
 
     def home
-        # if request.method == "POST"
-        #     puts request.method
-        #     puts "anil"
-        #     @allblogs = Content.order(params[:filter].to_sym)  
-        # else
-        #     @allblogs = Content.all
-        # end
-        @allblogs = Content.order(params[:filter])
-        puts params[:filter].class  
+        if params[:filter].nil?
+            @all = Content.all
+         
+        else
+            @all = Content.where(category: params[:filter])
+        end
         @l_id = params[:param1]
 
     end
@@ -38,8 +35,10 @@ class ContentsController < ApplicationController
             title: params[:contents][:title],
             blog: params[:contents][:blog],
             references: params[:contents][:references],
+            category: params[:contents][:category],
             blogid: @l_id
         )
+        puts @allblogs
 
         if @allblogs.save
             redirect_to home_path(param1: @l_id)
@@ -124,6 +123,7 @@ class ContentsController < ApplicationController
             title: params[:contents][:title],
             blog: params[:contents][:blog],
             references: params[:contents][:references],
+            category: params[:contents][:category],
             blogid: @l_id
         )
 
