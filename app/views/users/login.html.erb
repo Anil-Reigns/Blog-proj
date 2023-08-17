@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag "login", "data-turbo-track": "reload" %>
+
+<div id="main">
+    <div id="main1">
+        <div id="main11">
+            <div>
+                <p>Login</p>
+            </div>
+            <div id="form_c">
+                <form action="" method="post" id="form">
+                    <div id="tab">
+                        <div>
+                            <label for="username">User Name :</label>
+                        </div> 
+                        <div> 
+                            <input type="text" required name = "users[username]" id="username"><br>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="pass">
+                            <input type="password" required name = "users[password]" id="password" placeholder="Enter your password">
+                        </div> 
+                        <div>
+                            <% if @check %>
+                                <h5>User not exist</h5>
+                            <% end %>
+                        </div>
+                        <div id="login_b">  
+                            <button type="submit">Login</button>
+                        </div>  
+                    </div>
+                </form>
+
+                <div id="create">
+                    <%= link_to "Create Acoount", signup_path %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

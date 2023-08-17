@@ -1,0 +1,26 @@
+#nomatch{
+    height: 150px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#res{
+    justify-content: center;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+h3{
+    border-bottom: 3px solid red;
+}
+#outer{
+    min-height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}

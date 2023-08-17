@@ -1,0 +1,80 @@
+
+#maindiv{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+#outer{
+    min-height: 100vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#cont{
+    height: 150px;
+    width: 98.5%;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px grey;
+
+}
+
+pre{
+    height: 70%;
+    font-size: 30px;
+    font-weight: normal;
+    margin-left: 20px;
+}
+#link{
+    height: 30%;
+    width: 100%;
+    background-color: rgb(188, 244, 225);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    
+}
+button{
+    height: 25px;
+    width: 70px;
+    background-color: rgb(229, 202, 221);
+    border: 1px solid black;
+    border-radius: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#link button,a{
+    font-size: small;
+    
+}
+
+#as_t{
+    height: 100vh;
+    width: 30%;
+    background-color: transparent;
+    margin-top: 10px;
+    
+}
+
+#as_t1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#as_t2{
+    min-height: 30%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h3{
+    border-bottom: 3px solid red;
+}

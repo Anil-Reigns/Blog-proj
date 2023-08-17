@@ -1,0 +1,50 @@
+<%= stylesheet_link_tag "myblog", "data-turbo-track": "reload" %>
+<%= render "base"%>
+
+<div id="maindiv">
+<div id="outer">
+<% if @my.empty?  %>
+<br><br><br>
+    <marquee style="color: red" behavior="alternate"><pre><h1>you do not have blogs yet... 
+                Create one 
+        <%= link_to "Create Your Blog", create_path(param1: @l_id)%></h1></pre></marquee>
+<% end %>
+
+    
+    <% @my.each do |x|%>
+    <div id="cont">
+        <% if x.class == NilClass %>
+            <% next %>
+        <% end %>
+        <pre><%= x.title %></pre>
+        <div id="link">
+        <form action="" method="delete">
+            <input type="text" style="display: none;" name="del" value="<%= x.id %>">
+            <button type="submit">Delete</button>
+        </form>
+
+        <button><%= link_to "Edit", edit_path(param1: @l_id, param2: x.id) %></button>
+        <button><%= link_to "Show", show_path(param1: @l_id, param2: x.id), method: :get%></button>
+        </div>
+
+    </div>
+    <% end %>
+    
+</div>
+<aside id="as_t">
+    <div id="as_t1">
+        <h3>My liked Bolgs</h3>
+    </div>
+    <div id="as_t2">
+        <% @mylikes.each do |x| %>
+            <br>
+            <% if (Content.find_by(id: x.blogid)) %>
+                <%= link_to Content.find(x.blogid).title, show_path(param1: @l_id, param2: x.blogid)%>
+            <% end %>
+        <% end %>
+    </div>
+    <% if @mylikes.size == 0 %>
+        <h3>You did not like any blogs yet! </h3>
+    <% end %>
+</aside>
+</div>

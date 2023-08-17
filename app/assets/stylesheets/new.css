@@ -1,0 +1,80 @@
+
+form{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#c_form{
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(225, 194, 200);
+
+}
+
+pre{
+    font-size: 40px;
+    width: 40px;
+    color: rgb(70, 68, 68);
+    margin-left: 40px;
+}
+
+#f_cont{
+    height: 50%;
+    width: 45%;
+    box-shadow: 0 0 30px black;
+    margin-top: 40px;
+    margin-left: 350px;
+}
+
+#c1{
+    height: 15%;
+    background-color: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 20px;
+}
+#c2{
+    height: 50%;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#blog{
+    height: 100px;
+    width: 95%;
+    border: 1.5ps solid black;
+    background-color: transparent;
+}
+
+#c3{
+    height: 10%;
+    background-color: transparent;
+    margin-left: 20px;
+}
+#c4{
+    height: 20;
+    background-color: transparent;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#c4 button{
+    height: 30px;
+    width: 110px;
+    border-radius: 8px;
+    background-color: rgb(180, 180, 234);
+    margin-top: 10px;
+    border: 1px solid rgb(18, 16, 16);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.inp{
+    border: none;
+    border-bottom: 1.5px solid black;
+    background-color: transparent;
+    width: 140px;
+}
+.inp:focus{
+    outline: none;
+}

@@ -1,0 +1,48 @@
+<%= stylesheet_link_tag "signup", "data-turbo-track": "reload" %>
+
+<div id="main">
+    <div id="main1">
+        <div id="main11">
+            <div>
+                <p>Sign Up</p>
+            </div>
+            <div id="form_c">
+                <form action="" method="post" id="form">
+                    <div id="tab">
+                        <div>
+                            <label for="username">User Name :</label>
+                        </div> 
+                        <div> 
+                            <input type="text" required name = "users[username]" id="username"><br>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <label for="mobile">Mobile Number :</label>
+                        </div>
+            
+                        <div>
+                            <input type="number" required name = "users[mobile]" id="mobile" class="in">
+                        </div>
+                        <br>
+                        <div id="pass">
+                            <input type="password" required name = "users[password]" id="password" placeholder="Enter your password">
+                        </div> 
+                        <div>
+                            <% if @check %>
+                                <h5 id="par">Username is already taken</h5>
+                            <% end %>
+                        </div>
+                        <div id="login_b">  
+                            <button type="submit" id="btn">Create Account</button>
+                        </div>  
+                    </div>
+                </form>
+
+                <div id="create">
+                    <%= link_to "Login", login_path %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

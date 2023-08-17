@@ -1,0 +1,33 @@
+<%= stylesheet_link_tag "new", "data-turbo-track": "reload" %>
+<%= render "base" %>
+
+<form action="" method="post" id="c_form">
+    <pre>create your blog</pre>
+
+<div id="f_cont">
+        <div id="c1">
+            <label for="title">Blog title :</label>
+            <input type="text" class="inp" required name="contents[title]" id="title" value="<%= @b.title%>"><br>
+        </div>
+
+        <div id="c2">
+            <label for="blog">Description :</label>
+            <input type="text" id="blog" required name="contents[blog]" id="blog" value="<%= @b.blog%>">
+        </div>
+
+        <div id="c3">
+            <label for="author">Enter your name :</label>
+            <input type="text" class="inp" required name="contents[author]" id="author" value="<%= @b.author%>">
+            
+            <label for="references">References :</label>
+            <input type="text" class="inp" required name="contents[references]" id="references" value="<%= @b.references%>"><br>
+
+            <input type="number" value="<%= @l_id %>" name="contents[blogid]" style="display: none;">
+            <input type="number" value="<%= @b.id %>" name="contents[fetch_id]" style="display: none;">
+        </div>
+        <div id="c4">
+            <button type="submit">submit</button>
+        </div>
+</div>
+
+</form>

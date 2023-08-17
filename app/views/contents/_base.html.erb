@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+<div id="main">
+    <div id="main1">
+        <img src="https://www.onblastblog.com/wp-content/uploads/2017/08/blogger-logo-624x357.jpg" alt="">
+    </div>
+    <div id="main2">
+        <%= link_to "Home", home_path(param1: @l_id) %>
+        <%= link_to "What are Blogs", info_path(param1: @l_id)%>
+        <%= link_to "Create Your Blog", create_path(param1: @l_id)%>
+        <%= link_to "About Page", about_path(param1: @l_id) %>
+        
+    </div>
+    <div id="main3">
+        <button id="b1" class="common"><%= link_to "Logout", login_path %></button>
+        <button id="b2" class="common"><%= link_to "My Blogs", myblog_path(param1: @l_id)%></button>
+    </div>
+</div>

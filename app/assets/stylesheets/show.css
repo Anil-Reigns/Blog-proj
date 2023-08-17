@@ -1,0 +1,68 @@
+#para{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(225, 194, 200);
+    font-size: 40px;
+    padding-top: 20px;
+    padding-left: 140px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 10px;
+}
+
+#s_main{
+    height: 73vh;
+    width: 100%;
+    display: flex;
+    background-color: rgb(225, 194, 200);
+    justify-content: space-around;
+
+    
+}
+#s_h{
+    font-size: 55px;
+    font-weight: normal;
+    margin-left: 40px;
+
+}
+#s_cont{
+    height: 70%;
+    width: 60%;
+    box-shadow: 0 0 30px black;
+    margin-left: 145px;
+    
+}
+
+#f_1{
+    height: 75%;
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    padding-left: 30px;
+    justify-content: center;
+    align-items: center;
+}
+#f_2{
+    height: 25%;
+    width: 100%;
+    background-color: rgb(208, 208, 241);
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    
+}
+em{
+    border-bottom: 2px solid black;
+}
+
+aside{
+    height: 300px;
+    width: 40%;
+    margin-left: 145px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.fa-regular fa-heart{
+    background-color: transparent;
+}

@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag "home_", "data-turbo-track": "reload" %>
+<%= render "base" %>
+<div id="search">
+    <form action="/filter" method="post">
+        <input type="text" placeholder="Search the Blog title here.." name="filter">
+        <input type="number" value="<%= @l_id%>" style="display: none;" name="param1">
+        <button>Search</button>
+    </form>
+</div>
+
+
+<form action="/home" method="get">
+    <select name="filter" id="">
+        <option value="title">title</option>
+        <option value="author">author</option>
+    </select>
+    <input type="text" value="<%= @l_id %>" style="display: none;" name="param1">
+
+    <button type="submit">submit</button>
+</form>
+
+
+<div id="outer">
+<% @allblogs.each_with_index do |x, y|%>
+    <div id="container">
+        <h1 id="title_num"><%= "Blog #{y+1}" %></h1>
+        <div id="link">
+            <p id="title_head"><%= x.title %></p>
+            <div id="fin_li">
+                <%= link_to "show this blog", show_path(param1: @l_id, param2: x.id), method: :get%>
+            </div>
+        </div>
+    </div>
+<% end %>
+</div>
+
+

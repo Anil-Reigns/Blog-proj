@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/003/127/954/original/abstract-template-blue-background-white-squares-free-vector.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#main1{
+    height: 60%;
+    width: 28%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 30px black;
+    border-radius: 16px;
+    flex-direction: column;
+}
+
+#main11{
+    height: 95%;
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 16px;
+    flex-direction: column;
+}
+#form_c{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+form{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tab{
+    height: 90%;
+    width: 100%;
+}
+input{
+    height: 30px;
+    width: 100%;
+    color: black;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+}
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: black;
+    font-size: medium;
+}
+
+#login_b{
+    margin-top: 40px;
+    height: 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#login_b>button{
+    height: 40px;
+    width: 110px;
+    border-radius: 15px;
+    border: 1px solid rgb(6, 0, 0);
+    background-color: aliceblue;
+    font-size: large;
+}
+p{
+    font-weight: 150;
+    font-size: x-large;
+    border-bottom: 2px solid salmon;
+}
+a{
+    text-decoration: none;
+}
+
+h5{
+    margin-top: 10px;
+    color: red;
+}
