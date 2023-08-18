@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag "results", "data-turbo-track": "reload" %>
+<%= render "base"%>
+
+<div id="res">
+    <h3>Results</h3>
+</div>
+<div id="outer">
+<% @obj.each do |x| %>
+    <%= link_to x.title, show_path(param1: @l_id, param2: x.id)%> 
+<% end %>
+</div>
+
+<% if @obj.size == 0 %>
+    <marquee behavior="alternate"><h2>No blogs Available</h2></marquee>
+
+    <div id="nomatch"><%= link_to "Go to Home", home_path(param1: @l_id) %></div>
+<% end %>

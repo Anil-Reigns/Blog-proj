@@ -9,11 +9,11 @@
 </div>
 
 
-<form action="/home" method="get">
-    <select name="filter" id="">
-        <option value="automation">automation</option>
-        <option value="medical">medical</option>
-        <option value="author">construction</option>
+<form action="/cat_filter" method="post">
+    <select name="c_filter" id="" value="automation">
+    <% @cat_filter.each do |x| %>
+        <option value="<%= x.category%>"><%= x.category%></option>
+    <% end %>
     </select>
     <input type="text" value="<%= @l_id %>" style="display: none;" name="param1">
 

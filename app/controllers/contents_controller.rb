@@ -1,13 +1,9 @@
 class ContentsController < ApplicationController
 
     def home
-        if params[:filter].nil?
-            @all = Content.all
-         
-        else
-            @all = Content.where(category: params[:filter])
-        end
+        @all = Content.all
         @l_id = params[:param1]
+        @cat_filter = Content.select(:category).distinct 
 
     end
     def result
@@ -21,6 +17,21 @@ class ContentsController < ApplicationController
 
     def filter
         redirect_to filter_path(filter: params[:filter], param1: params[:param1])
+    end
+
+    def cat_results
+        @l_id = params[:param1]
+        if params[:c_filter].nil? 
+            @obj = []
+            puts "it is empty"
+        else
+            # @obj = Content.where(category: params[:c_filter])
+            @obj = Content.where("contents.category LIKE?", "%"+params[:c_filter]+"%")
+        end
+    end
+
+    def cat_filter
+        redirect_to cat_filter_path(c_filter: params[:c_filter], param1: params[:param1])
     end
 
     def new

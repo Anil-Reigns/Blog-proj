@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   post "filter", to: "contents#filter"
   get "filter", to: "contents#result"
   post "like", to: "contents#addlike"
-  get "home", to: "contents#home" 
+  get "home", to: "contents#home"
+  post "/cat_filter", to: "contents#cat_filter"
+  get "cat_filter", to: "contents#cat_results" 
 
 end
